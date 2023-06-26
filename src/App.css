@@ -4,6 +4,9 @@
 .increment-order {
   display: flex;
 }
+.card{
+  width: 55%;
+}
 .overlay {
   position: fixed;
   top: 0;

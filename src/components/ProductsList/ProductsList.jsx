@@ -60,7 +60,7 @@ export const ProductsList = () => {
       <div className="container mt-4">
         <div className="row">
           <ProductFilter />
-          <div className="col-md-9">
+          <div className="col-md-9 products">
             {filteredProducts.map((item) => {
               return <ProductCard {...item} key={item.id} />;
             })}{' '}
