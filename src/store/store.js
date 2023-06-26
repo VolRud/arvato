@@ -6,7 +6,7 @@ import logger from 'redux-logger';
 export const store = configureStore({
   reducer: {
     orders: orders,
-    products: productsList
+    products: productsList,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

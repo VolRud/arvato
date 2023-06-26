@@ -8,7 +8,6 @@ const initialState = {
   filteredProducts: [],
 };
 
-
 export const getProductsList = createAsyncThunk(
   'produtsList/getProductsList',
   async () => {
@@ -31,7 +30,7 @@ export const productsListSlice = createSlice({
       state.filteredProducts = state.products;
     },
   },
- 
+
   extraReducers: (builder) => {
     builder
       .addCase(getProductsList.pending, (state) => {
@@ -46,13 +45,9 @@ export const productsListSlice = createSlice({
   },
 });
 
-export const {
-  changeFilterState,
-  applyFilter,
-  resetFilter,
-} = productsListSlice.actions;
+export const { changeFilterState, applyFilter, resetFilter } =
+  productsListSlice.actions;
 
 export const selectProducts = (state) => state.products;
-
 
 export default productsListSlice.reducer;

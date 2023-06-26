@@ -1,37 +1,33 @@
 export const filterInitialState = {
-        category: 'all',
-        brand: 'all',
-        priceFrom: 0,
-        priceTo: Infinity,
-    }
-
+  category: 'all',
+  brand: 'all',
+  priceFrom: 0,
+  priceTo: Infinity,
+};
 
 export const filterConfig = [
-    {
-        id: 'category',
-        filterRule: (value, item) => {
-            return value === 'all' || value === item.category;
-        }
+  {
+    id: 'category',
+    filterRule: (value, item) => {
+      return value === 'all' || value === item.category;
     },
-    {
-        id: 'priceFrom',
-        filterRule: (value, item) => {
-            return item.price >= value;
-        }
+  },
+  {
+    id: 'priceFrom',
+    filterRule: (value, item) => {
+      return item.price >= value;
     },
-    {
-        id: 'priceTo',
-        filterRule: (value, item) => {
-            return item.price <= value;
-        }
-    }
-]
+  },
+  {
+    id: 'priceTo',
+    filterRule: (value, item) => {
+      return item.price <= value;
+    },
+  },
+];
 
+// TODO implement sorting of products
 // const config = [
-//     {
-//       id: 'images',
-//       title: 'Image'
-//     },
 //     {
 //       id: 'title',
 //       title: 'Name',
@@ -40,8 +36,8 @@ export const filterConfig = [
 //       }
 //     },
 //     {
-//       id: 'sales',
-//       title: 'Sales',
+//       id: 'price',
+//       title: 'price',
 //       sort (a, b) {
 //         return a - b;
 //       }
@@ -50,9 +46,9 @@ export const filterConfig = [
 
 // const sortData = (field, order) => {
 //     const column = this.config.find(item => item.id === field);
-    
+
 //     if (!column.sort) return;
-    
+
 //     const directions = {
 //       asc: 1,
 //       desc: -1
